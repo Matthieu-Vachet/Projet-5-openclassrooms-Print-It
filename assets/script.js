@@ -35,15 +35,27 @@ let totalslides = slides.length;
 
 // EventListeners du bouton Gauche
 arrow_left.addEventListener("click", () => {
-  currentSlide = (currentSlide + totalslides - 1) % totalslides;
+  if (currentSlide > 0) {
+    currentSlide--;
+  } else if (currentSlide === 0) {
+    currentSlide = totalslides - 1;
+  }
 
+  //Seconde solution
+  //currentSlide = (currentSlide + totalslides - 1) % totalslides;
   changeSlide();
 });
 
 // EventListeners du bouton Droite
 arrow_right.addEventListener("click", () => {
-  currentSlide = (currentSlide + 1) % totalslides;
+  if (currentSlide < totalslides - 1) {
+    currentSlide++;
+  } else if (currentSlide === totalslides - 1) {
+    currentSlide = 0;
+  }
 
+  //Seconde solution
+  //currentSlide = (currentSlide + 1) % totalslides;
   changeSlide();
 });
 
