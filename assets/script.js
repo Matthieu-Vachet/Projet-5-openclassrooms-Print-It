@@ -41,8 +41,15 @@ arrow_left.addEventListener("click", () => {
     currentSlide = totalslides - 1;
   }
 
-  //Seconde solution
-  //currentSlide = (currentSlide + totalslides - 1) % totalslides;
+  //solution numéro 2
+  // if (currentSlide > 0) {
+  //  currentSlide--;
+  // } else if (currentSlide === 0) {
+  //  currentSlide = 3;
+  // }
+
+  //Solution numéro 3
+  // currentSlide = (currentSlide + totalslides - 1) % totalslides;
   changeSlide();
 });
 
@@ -54,8 +61,15 @@ arrow_right.addEventListener("click", () => {
     currentSlide = 0;
   }
 
-  //Seconde solution
-  //currentSlide = (currentSlide + 1) % totalslides;
+  //Solution numéro 2
+  // if (currentSlide < 3) {
+  //  currentSlide++;
+  // } else if (currentSlide === 3) {
+  //  currentSlide = 0;
+  // }
+
+  //Solution numéro 3
+  // currentSlide = (currentSlide + 1) % totalslides;
   changeSlide();
 });
 
